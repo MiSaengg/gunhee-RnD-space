@@ -208,6 +208,15 @@ JSON of top 20 common words in each genre
 ```
 [Full list here](https://github.com/MiSaengg/gunhee-RnD-space/blob/main/dataset_process/word_cloud/top_words.json)
 
+## BERT (Bidirectional Encoder Representations from Transformers (BERT))
+BERT, Bidirectional Encoder Representations from Transformers, is a family of masked-language models introduced in 2018 by researchers at Google. BERT is an open source machine learning framework for natural language processing (NLP). BERT is designed to help computers understand the meaning of ambiguous language in text by using surrounding text to establish context.
+The following [kaggle code](https://www.kaggle.com/code/alexanderprokudaylo/book-genre-prediction) is a good example of how to use BERT to predict book genres.
+
+BERT VS OPENAI GPT-3 for NLP text classification
+![bert-vs-openai-](https://user-images.githubusercontent.com/48280799/235327808-ec963dcb-be71-4ed5-bd5a-52ec29193eda.jpg)
+Full research paper [here](https://www.researchgate.net/publication/338931711_A_Short_Survey_of_Pre-trained_Language_Models_for_Conversational_AI-A_New_Age_in_NLP)
+
+
 ## To work on:
 <ul>
     <li><a href="https://www.kaggle.com/code/alexanderprokudaylo/book-genre-prediction">Kaggle dataset</a></li>
