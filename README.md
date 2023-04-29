@@ -75,7 +75,10 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.svm import SVC
 from sklearn import metrics
 ```
+Genre count chart
 
+
+Confusion matrix
 
 
 ## WordCloud Analysis and Modelling (no need for modelling since Multinomial Logistic Regression analysis is already done)
