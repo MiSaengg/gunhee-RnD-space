@@ -84,6 +84,6 @@ top_words.json for top 15 most common words in each genre summary.
 
 ## To work on:
 <ul>
-    <li>[Kaggle dataset](https://www.kaggle.com/code/alexanderprokudaylo/book-genre-prediction)</li>
+    <li><a href="https://www.kaggle.com/code/alexanderprokudaylo/book-genre-prediction">Kaggle dataset</a></li>
     <li>OpenAI NLP output test</li>
 </ul>
