@@ -24,8 +24,8 @@ import sentencepiece as spm
 from data_utils import SEP_ID, VOCAB_SIZE, CLS_ID
 import model_utils
 import function_builder
-from classifier_utils import PaddingInputExample
-from classifier_utils import convert_single_example
+from dataset_process.classifier_utils import PaddingInputExample
+from dataset_process.classifier_utils import convert_single_example
 from prepro_utils import preprocess_text, encode_ids
 
 
