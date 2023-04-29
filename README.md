@@ -76,10 +76,10 @@ from sklearn.svm import SVC
 from sklearn import metrics
 ```
 Genre count chart
-https://user-images.githubusercontent.com/48280799/235293899-d319fd9f-ec1c-4d09-a7cf-2f83980bac0c.png
+![Genre chart](https://user-images.githubusercontent.com/48280799/235293899-d319fd9f-ec1c-4d09-a7cf-2f83980bac0c.png)
 
 Confusion matrix
-https://user-images.githubusercontent.com/48280799/235293936-c5a2f614-355d-4861-ae71-1b087432bb18.png
+![Confusion Matrix](https://user-images.githubusercontent.com/48280799/235293936-c5a2f614-355d-4861-ae71-1b087432bb18.png)
 
 <b>Key takeaways:</b> 
 Here we can see that the model is getting confused with the horror, thriller and crime which is beacause they contain similar words.
