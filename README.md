@@ -176,6 +176,37 @@ def make_string(genre):
             s+=(row['summary']+' ')
     return s
 ```
+JSON of top 20 common words in each genre
+```sh
+{
+  "thriller": [
+    ["find", 1.0],
+    ["less", 0.7212389380530974],
+    ["life", 0.6519174041297935],
+    ["alex", 0.5914454277286135],
+    ["take", 0.5707964601769911],
+    ["world", 0.5117994100294986],
+    ["time", 0.5029498525073747],
+    ["kill", 0.5],
+    ["family", 0.5],
+    ["murder", 0.4970501474926254],
+    ["back", 0.4896755162241888],
+    ["first", 0.47640117994100295],
+    ["death", 0.4749262536873156],
+    ["make", 0.4690265486725664],
+    ["secret", 0.4557522123893805],
+    ["know", 0.45132743362831856],
+    ["father", 0.44542772861356933],
+    ["meet", 0.4424778761061947],
+    ["novel", 0.4306784660766962],
+    ["help", 0.4247787610619469]
+  ],
+  .
+  .
+  .
+}
+```
+[Full list here](https://github.com/MiSaengg/gunhee-RnD-space/blob/main/dataset_process/word_cloud/top_words.json)
 
 ## To work on:
 <ul>
