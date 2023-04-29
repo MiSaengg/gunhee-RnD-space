@@ -76,10 +76,14 @@ from sklearn.svm import SVC
 from sklearn import metrics
 ```
 Genre count chart
-
+https://github.com/MiSaengg/gunhee-RnD-space/issues/1#issue-1689457909
 
 Confusion matrix
+https://github.com/MiSaengg/gunhee-RnD-space/issues/1#issuecomment-1528721783
 
+<b>Key takeaways:</b> 
+Here we can see that the model is getting confused with the horror, thriller and crime which is beacause they contain similar words.
+There also needs to be more data for the genres sports, romance, travel, psychology - there is imbalance in dataset for accurate text classification.
 
 ## WordCloud Analysis and Modelling (no need for modelling since Multinomial Logistic Regression analysis is already done)
 **WordCloud** is a data visualization technique used for representing text data in which the size of each word indicates its frequency or importance. Significant textual data points can be highlighted using a word cloud. Word clouds are widely used for analyzing data from social network websites. In this article, you will learn how to create a word cloud in Python.
