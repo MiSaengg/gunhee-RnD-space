@@ -127,34 +127,34 @@ def make_string(genre):
     return s
 ```
 
-Thriller
+Thriller<br>
 ![thriller](https://user-images.githubusercontent.com/48280799/235294418-822d50ac-ce01-4784-b152-b40b82139d6e.png)
 
-Fantasy
+Fantasy<br>
 ![fantasy](https://user-images.githubusercontent.com/48280799/235294425-8b9a3e7e-4c9d-49bd-a7b6-c0234c8e08b4.png)
 
-Science
+Science<br>
 ![science](https://user-images.githubusercontent.com/48280799/235294481-39eee485-efcc-4447-9691-53f473340326.png)
 
-History
+History<br>
 ![history](https://user-images.githubusercontent.com/48280799/235294533-fd323d15-9f27-443a-979e-b7d0ed282e23.png)
 
-Horror
+Horror<br>
 ![horror](https://user-images.githubusercontent.com/48280799/235294547-5bfe3c8b-be23-4955-8a80-43e3dac6fd46.png)
 
-Crime
+Crime<br>
 ![crime](https://user-images.githubusercontent.com/48280799/235294559-c5b72672-771d-4e97-84bc-c07f0e7d19b1.png)
 
-Romance
+Romance<br>
 ![romance](https://user-images.githubusercontent.com/48280799/235294566-88c5d4ef-7ce5-44d6-b8a8-dd10d148ca4d.png)
 
-Psychology
+Psychology<br>
 ![psychology](https://user-images.githubusercontent.com/48280799/235294575-572a0489-c793-4471-9e43-d1877d29387e.png)
 
-Sports
+Sports<br>
 ![sports](https://user-images.githubusercontent.com/48280799/235294583-a5455e37-63cd-4b9b-b4ab-66c10404fd78.png)
 
-Travel
+Travel<br>
 ![travel](https://user-images.githubusercontent.com/48280799/235294589-7fc52e4d-fd15-420f-8787-8f5af8122d94.png)
 
 Generate JSON of 20 most common words in each genre
