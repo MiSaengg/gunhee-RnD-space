@@ -88,6 +88,94 @@ There also needs to be more data for the genres sports, romance, travel, psychol
 ## WordCloud Analysis and Modelling (no need for modelling since Multinomial Logistic Regression analysis is already done)
 **WordCloud** is a data visualization technique used for representing text data in which the size of each word indicates its frequency or importance. Significant textual data points can be highlighted using a word cloud. Word clouds are widely used for analyzing data from social network websites. In this article, you will learn how to create a word cloud in Python.
 top_words.json for top 15 most common words in each genre summary.
+[Kaggle dataset code](https://www.kaggle.com/code/prathameshgadekar/book-genre-prediction-nlp)
+
+Required packages
+```sh
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import plotly.express as px
+import missingno as msno 
+
+import plotly.offline as py
+py.init_notebook_mode(connected=True)
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+
+import time
+```
+Generate wordcloud
+```sh
+def print_wordCloud(genre,summary):
+    print(genre)
+    wordcloud = WordCloud(width = 400, height = 400, 
+                background_color ='white', 
+                min_font_size = 10).generate(summary)
+    plt.figure(figsize = (7, 7), facecolor = 'white', edgecolor='blue') 
+    plt.imshow(wordcloud) 
+    plt.axis("off") 
+    plt.tight_layout(pad = 0) 
+    plt.show()
+def make_string(genre):
+    s = ""
+    for row_index,row in data.iterrows():
+        if(row['genre'] == genre):
+            s+=(row['summary']+' ')
+    return s
+```
+
+Thriller
+![thriller](https://user-images.githubusercontent.com/48280799/235294418-822d50ac-ce01-4784-b152-b40b82139d6e.png)
+
+Fantasy
+![fantasy](https://user-images.githubusercontent.com/48280799/235294425-8b9a3e7e-4c9d-49bd-a7b6-c0234c8e08b4.png)
+
+Science
+![science](https://user-images.githubusercontent.com/48280799/235294481-39eee485-efcc-4447-9691-53f473340326.png)
+
+History
+![history](https://user-images.githubusercontent.com/48280799/235294533-fd323d15-9f27-443a-979e-b7d0ed282e23.png)
+
+Horror
+![horror](https://user-images.githubusercontent.com/48280799/235294547-5bfe3c8b-be23-4955-8a80-43e3dac6fd46.png)
+
+Crime
+![crime](https://user-images.githubusercontent.com/48280799/235294559-c5b72672-771d-4e97-84bc-c07f0e7d19b1.png)
+
+Romance
+![romance](https://user-images.githubusercontent.com/48280799/235294566-88c5d4ef-7ce5-44d6-b8a8-dd10d148ca4d.png)
+
+Psychology
+![psychology](https://user-images.githubusercontent.com/48280799/235294575-572a0489-c793-4471-9e43-d1877d29387e.png)
+
+Sports
+![sports](https://user-images.githubusercontent.com/48280799/235294583-a5455e37-63cd-4b9b-b4ab-66c10404fd78.png)
+
+Travel
+![travel](https://user-images.githubusercontent.com/48280799/235294589-7fc52e4d-fd15-420f-8787-8f5af8122d94.png)
+
+Generate JSON of 20 most common words in each genre
+```sh
+def print_wordCloud(genre,summary):
+    print(genre)
+    wordcloud = WordCloud(width = 400, height = 400, 
+                background_color ='white', 
+                min_font_size = 10).generate(summary)
+    plt.figure(figsize = (7, 7), facecolor = 'white', edgecolor='blue') 
+    plt.imshow(wordcloud) 
+    plt.axis("off") 
+    plt.tight_layout(pad = 0) 
+    plt.show()
+def make_string(genre):
+    s = ""
+    for row_index,row in data.iterrows():
+        if(row['genre'] == genre):
+            s+=(row['summary']+' ')
+    return s
+```
 
 ## To work on:
 <ul>
