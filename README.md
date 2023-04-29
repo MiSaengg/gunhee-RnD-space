@@ -54,7 +54,36 @@ trainer.train()
 **Multinomial Logistic Regression** is a classification method that generalizes logistic regression to multiclass problems, i.e. with more than two possible discrete outcomes. That is, it is a model that is used to predict the probabilities of the different possible outcomes of a categorically distributed dependent variable, given a set of independent variables (which may be real-valued, binary-valued, categorical-valued, etc.).
 The problem: The data for psychology, romance, sports, and travel genre is smaller respectively compared to the other genres, causing imbalance in outcomes.
 The solution: We use Multinomial Logistic Regression to predict the probabilities of the different possible outcomes of a categorically distributed dependent variable, given a set of independent variables (which may be real-valued, binary-valued, categorical-valued, etc.). Then we fine tune the model with OpenAI to include the data from the other genres to improve the accuracy of the model (specifcially for the smaller genres).
+[Kaggle dataset code](https://www.kaggle.com/code/athu1105/bookgenreprediciton)
+
+
+Required packages
+```sh
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import re
+import nltk 
+import string
+from collections import Counter 
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB, MultinomialNB
+from sklearn.svm import SVC
+from sklearn import metrics
+```
+
+
 
 ## WordCloud Analysis and Modelling (no need for modelling since Multinomial Logistic Regression analysis is already done)
 **WordCloud** is a data visualization technique used for representing text data in which the size of each word indicates its frequency or importance. Significant textual data points can be highlighted using a word cloud. Word clouds are widely used for analyzing data from social network websites. In this article, you will learn how to create a word cloud in Python.
 top_words.json for top 15 most common words in each genre summary.
+
+## To work on:
+<ul>
+    <li>[Kaggle dataset](https://www.kaggle.com/code/alexanderprokudaylo/book-genre-prediction)</li>
+    <li>OpenAI NLP output test</li>
+</ul>
