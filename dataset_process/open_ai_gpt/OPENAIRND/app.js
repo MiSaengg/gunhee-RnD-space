@@ -1,16 +1,18 @@
 const express = require('express');
-const axios = require('axios');
 const dotenv = require('dotenv');
+const { Configuration, OpenAIApi } = require('openai');
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 
-const apiKey = ''; //Input your API key here
-const apiUrl = 'https://api.openai.com/v1/engines/davinci/completions';
+const config = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(config);
 
 const path = require('path');
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
@@ -21,27 +23,23 @@ app.post('/determine-genre', async (req, res) => {
   const { summary } = req.body;
 
   try {
-    const prompt = `Determine the genre from the following list (thriller, fantasy, science, history, horror, crime, romance, psychology, sports, travel) based on the summary: "${summary}". The genre is:`;
-    const response = await axios.post(apiUrl, {
+    const prompt = `Based on the summary: "${summary}", determine two suitable genres from this list: thriller, fantasy, science fiction, history, horror, crime, romance, psychology, sports, travel.`;
+    const response = await openai.createCompletion({
+      model: 'text-davinci-003',
       prompt,
-      max_tokens: 10,
+      max_tokens: 50,
       n: 1,
-      temperature: 0.5,
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      }
+      temperature: 0.8,
     });
 
-    const genre = response.data.choices[0].text.trim();
-    res.json({ genre });
+    const genresText = response.data.choices[0].text.trim();
+    const genres = genresText.split(',').map(genre => genre.trim());
+    res.json({ genres });
   } catch (error) {
     console.error('Error determining genre:', error);
     res.status(500).json({ error: 'Error determining genre', details: error.message });
   }
 });
-
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

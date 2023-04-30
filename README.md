@@ -247,7 +247,51 @@ To understand how confusion matrix works using scikit learn, please refer to [th
 <summary><h4>OpenAI Text NLP Text Classification</h4></summary>
 
 ## OpenAI Text NLP Text Classification
-Using OpenAI GPT
+Open OPENAIRND folder in new workspace and run the following command
+
+```sh
+npm install express axios dotenv
+npm install openai
+```
+
+In app.js, input your OpenAI API key
+```sh
+const config = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY, //replace process.env.OPENAI_API_KEY with your API key or input your API key to .env file
+});
+```
+
+GPT prompt and response
+```sh
+app.post('/determine-genre', async (req, res) => {
+  const { summary } = req.body;
+
+  try {
+    const prompt = `Based on the summary: "${summary}", determine two suitable genres from this list: thriller, fantasy, science fiction, history, horror, crime, romance, psychology, sports, travel.`;
+    const response = await openai.createCompletion({
+      model: 'text-davinci-003',
+      prompt,
+      max_tokens: 50,
+      n: 1,
+      temperature: 0.8,
+    });
+
+    const genresText = response.data.choices[0].text.trim();
+    const genres = genresText.split(',').map(genre => genre.trim());
+    res.json({ genres });
+  } catch (error) {
+    console.error('Error determining genre:', error);
+    res.status(500).json({ error: 'Error determining genre', details: error.message });
+  }
+});
+```
+When given prompts from function fetchGenre()
+![function](https://user-images.githubusercontent.com/48280799/235381723-1481d461-5b74-4ce9-9632-945315424066.png)
+
+The output
+![console output](https://user-images.githubusercontent.com/48280799/235381714-a8ddbfdf-61ab-4b70-baf1-5b4b58d73b9d.png)
+
+<b>Key takeaways</b>: The GPT text completion model, text-davinci-03 provides a relatively accurate determination of the text classification of the summary. However, the model is not perfect and can be improved. The model is specifically set to determine two genres. Fine-tuning is a possibility to improve the model, however time considerations should be taken.
 
 </details>
 
@@ -255,5 +299,5 @@ Using OpenAI GPT
 
 ## To work on:
 <ul>
-    <li>OpenAI NLP output test</li>
+    <li>Font style and size for readability</li>
 </ul>
