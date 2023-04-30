@@ -217,7 +217,7 @@ BERT VS OPENAI GPT-3 for NLP text classification
 Full research paper [here](https://www.researchgate.net/publication/338931711_A_Short_Survey_of_Pre-trained_Language_Models_for_Conversational_AI-A_New_Age_in_NLP)
 
 Confusion matrix of BERT:
-![confusion matrix bert])(https://user-images.githubusercontent.com/48280799/235328996-371c1fed-12a8-4809-bb6e-89c0e172082b.png)
+![confusion matrix bert](https://user-images.githubusercontent.com/48280799/235328996-371c1fed-12a8-4809-bb6e-89c0e172082b.png)
 We can see more true positives compared to the multinominal naive bayes model and sigthly higher accuracy for psychology, romance, sports, and travel genres. 
 Due to no GPU, I was not able to run the model on the entire dataset. The result was sourced from the Kaggle dataset code.
 To understand how confusion matrix works using scikit learn, please refer to [this article](https://www.jcchouinard.com/confusion-matrix-in-scikit-learn/).
