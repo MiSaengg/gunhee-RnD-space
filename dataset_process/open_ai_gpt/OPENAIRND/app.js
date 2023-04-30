@@ -16,7 +16,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Genre Detector API!');
+  res.send('Genre Detector API');
 });
 
 app.post('/determine-genre', async (req, res) => {
