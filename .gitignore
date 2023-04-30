@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# api-key
+dataset_process/open_ai_gpt/api_key.js

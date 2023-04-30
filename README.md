@@ -222,8 +222,10 @@ We can see more true positives compared to the multinominal naive bayes model an
 Due to no GPU, I was not able to run the model on the entire dataset. The result was sourced from the Kaggle dataset code.
 To understand how confusion matrix works using scikit learn, please refer to [this article](https://www.jcchouinard.com/confusion-matrix-in-scikit-learn/).
 
+## OpenAI Text NLP Text Classification
+Using OpenAI GPT
+
 ## To work on:
 <ul>
-    <li><a href="https://www.kaggle.com/code/alexanderprokudaylo/book-genre-prediction">Kaggle dataset</a></li>
     <li>OpenAI NLP output test</li>
 </ul>
