@@ -1,9 +1,9 @@
 ## DAVID'S R&D SPACE
 
-<h3> Data Processing </h3>
+## Data Processing
 
 <details>
-<summary><h2>XLNet</h2></summary>
+<summary><h4>XLNet</h4></summary>
 
 ## XLNet
 **XLNet** is a new unsupervised language representation learning method based on a novel generalized permutation language modeling objective. Additionally, XLNet employs [Transformer-XL](https://arxiv.org/abs/1901.02860) as the backbone model, exhibiting excellent performance for language tasks involving long context. Overall, XLNet achieves state-of-the-art (SOTA) results on various downstream language tasks including question answering, natural language inference, sentiment analysis, and document ranking. [Forked from here](https://github.com/zihangdai/xlnet)
@@ -57,7 +57,7 @@ trainer.train()
 </details>
 
 <details>
-<summary><h2>Multinomial Model</h2></summary>
+<summary><h4>Multinomial Model</h4></summary>
 
 ## Multinomial Logistic Regression Analysis
 **Multinomial Logistic Regression** is a classification method that generalizes logistic regression to multiclass problems, i.e. with more than two possible discrete outcomes. That is, it is a model that is used to predict the probabilities of the different possible outcomes of a categorically distributed dependent variable, given a set of independent variables (which may be real-valued, binary-valued, categorical-valued, etc.).
@@ -97,7 +97,7 @@ There also needs to be more data for the genres sports, romance, travel, psychol
 </details>
 
 <details>
-<summary><h2>WordCloud Analysis</h2></summary>
+<summary><h4>WordCloud Analysis</h4></summary>
 
 ## WordCloud Analysis and Modelling (no need for modelling since Multinomial Logistic Regression analysis is already done)
 **WordCloud** is a data visualization technique used for representing text data in which the size of each word indicates its frequency or importance. Significant textual data points can be highlighted using a word cloud. Word clouds are widely used for analyzing data from social network websites. In this article, you will learn how to create a word cloud in Python.
@@ -225,7 +225,7 @@ JSON of top 20 common words in each genre
 </details>
 
 <details>
-<summary><h2>BERT (Bidirectional Encoder Representations from Transformers)</h2></summary>
+<summary><h4>BERT (Bidirectional Encoder Representations from Transformers)</h4></summary>
 
 ## BERT (Bidirectional Encoder Representations from Transformers)
 BERT, Bidirectional Encoder Representations from Transformers, is a family of masked-language models introduced in 2018 by researchers at Google. BERT is an open source machine learning framework for natural language processing (NLP). BERT is designed to help computers understand the meaning of ambiguous language in text by using surrounding text to establish context.
@@ -240,6 +240,11 @@ Confusion matrix of BERT:
 We can see more true positives compared to the multinominal naive bayes model and sigthly higher accuracy for psychology, romance, sports, and travel genres. 
 Due to no GPU, I was not able to run the model on the entire dataset. The result was sourced from the Kaggle dataset code.
 To understand how confusion matrix works using scikit learn, please refer to [this article](https://www.jcchouinard.com/confusion-matrix-in-scikit-learn/).
+
+</details>
+
+<details>
+<summary><h4>OpenAI Text NLP Text Classification</h4></summary>
 
 ## OpenAI Text NLP Text Classification
 Using OpenAI GPT
