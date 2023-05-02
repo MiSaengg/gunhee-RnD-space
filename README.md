@@ -417,6 +417,8 @@ python3 main.py
 Results of the program:
 ![Response](https://user-images.githubusercontent.com/48280799/235793022-72732e5a-187a-4953-9a75-c189e649d52a.png)
 
+</details>
+
 ## Next Steps:
 - [ ] Create a web app to run the program
 - [ ] Connect the program to node using flask or express using jsx version of the program
